@@ -4,6 +4,10 @@ import Data from './Data'
 
 const MenuList = () => {
 
+  const [foodItems, setFoodItems] = useState([]);
+  const callbackDataFromData = (dataFromData) => {
+    setFoodItems(dataFromData);
+  }
 
   const handleClickFavorite = (indexItem) => {
 
@@ -15,11 +19,6 @@ const MenuList = () => {
 
     // Affichage
     setFoodItems(copyFoodItems);
-  }
-
-  const [foodItems, setFoodItems] = useState([]);
-  const callbackDataFromData = (dataFromData) => {
-    setFoodItems(dataFromData);
   }
 
   return (

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 
 const Data = ({callbackDataFromData}) => {
 
-  const [foodItems, setFoodItems] = useState([
+  const foodItems = [
     {
       itemName: "Caesar's Salad",
       description: "The original Caesar's Salad recipe",
@@ -32,7 +32,7 @@ const Data = ({callbackDataFromData}) => {
       price: 30,
       isFavorite: false
     }
-  ]);
+  ];
 
   useEffect(() => {
     callbackDataFromData(foodItems);
